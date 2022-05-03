@@ -10,7 +10,7 @@
 
 ### Create New App
 
-This is a project template for [Svelte](https://svelte.dev/) apps. Base on [sveltejs/template](https://github.com/sveltejs/template). It lives at <https://github.com/sveltejs/template.>.
+This is a project template for [Svelte](https://svelte.dev/) apps. Base on [sveltejs/template](https://github.com/sveltejs/template). It lives at <https://github.com/sveltejs/template>.
 
 To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
 
@@ -60,7 +60,7 @@ npm run build
 
 You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
 
-\*_If see error close VS Code and reopen_
+\*_If see any error. Please close VS Code and reopen_
 
 ## Reference and special thanks
 
