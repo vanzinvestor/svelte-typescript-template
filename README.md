@@ -6,76 +6,20 @@
 - [x] SCSS/SASS
 - [x] VS Code
 
-## Use TypeScript in Svelte
+## Use
 
-### Create App `svelte-typescript-app`
+### Create New App `svelte-typescript-app`
 
 ```bash
-npx degit sveltejs/template svelte-typescript-app
+npx degit vanzinvestor/svelte-typescript-template svelte-typescript-app
 ```
 
 ```bash
 cd svelte-typescript-app
 ```
 
-### Setup to TypeScript
-
 ```bash
-node scripts/setupTypeScript.js
-```
-
-### Adding TypeScript to an existing project
-
-```bash
-npm i -D tslib @rollup/plugin-typescript @tsconfig/svelte typescript svelte-preprocess svelte-check
-```
-
-### Change file `rollup.config.js`
-
-```js
-// import sveltePreprocess from 'svelte-preprocess'; // Remove
-import autoPreprocess from 'svelte-preprocess'; // Add
-import typescript from '@rollup/plugin-typescript'; // Add
-
-export default {
-  plugins: [
-    svelte({
-      // preprocess: sveltePreprocess({ sourceMap: !production }), // Remove
-      preprocess: autoPreprocess(), // Add
-    }),
-    typescript({ sourceMap: !production }), // Add
-  ],
-};
-```
-
-### In file `rollup.config.js` Must have
-
-```json
-{
-  "extends": "@tsconfig/svelte/tsconfig.json",
-
-  "include": ["src/**/*", "src/node_modules"],
-  "exclude": ["node_modules/*", "__sapper__/*", "public/*"]
-}
-```
-
-### Editor Support (Install Extension)
-
-Any editor using an LSP can be supported. The [VS Code extension](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) has been our primary focus, but there is work in progress on Atom, and Vim via coc-svelte has been updated with the latest LSP.
-
-After install extension. adjust your VS Code settings
-
-```json
-"[svelte]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "svelte.svelte-vscode"
-  },
-```
-
-### CI Checks
-
-```bash
-npx svelte-check
+npm install
 ```
 
 ### Run App
@@ -84,48 +28,13 @@ npx svelte-check
 npm run dev
 ```
 
-see <http://localhost:8080>
+Open browser <http://localhost:8080>
 
-## If see error close VS Code and reopen
+\*_If see error close VS Code and reopen_
 
 Ref:
 [Svelte <3 TypeScript](https://svelte.dev/blog/svelte-and-typescript)
 [VS Code format svelte](https://github.com/sveltejs/language-tools/issues/225#issuecomment-673271334)
-
-## Use Scss in Svelte
-
-### Install package Node V14 use node-sass@4
-
-```bash
-npm i -D node-sass@4
-```
-
-### Setting up a svelte-config.js
-
-```js
-const preprocess = require('svelte-preprocess');
-
-module.exports = {
-  preprocess: preprocess(),
-};
-```
-
-### Restart the svelte language server
-
-Restart the svelte language server
-You will need to tell svelte-vscode to restart the svelte language server in order to pick up the new configuration.
-
-Hit `ctrl-shift-p` or `cmd-shift-p` on mac, type `svelte restart`, and select `Svelte: Restart Language Server`. Any errors you were seeing should now go away and you're now all set up!
-
-### Set the Format on `<style>` Tags
-
-```scss
-<style lang="scss">
-/* ... */
-</style>
-```
-
-Ref:
 [SCSS/Less Support](https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/scss-less.md)
 [Add SASS to Svelte JS with svelte-preprocess](https://linguinecode.com/post/add-sass-svelte-js)
 
