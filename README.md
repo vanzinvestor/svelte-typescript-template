@@ -1,6 +1,8 @@
-# Svelte in TypeScript
+# Setup Svelte
 
-## Create App `svelte-typescript-app`
+## Use TypeScript in Svelte
+
+### Create App `svelte-typescript-app`
 
 ```bash
 npx degit sveltejs/template svelte-typescript-app
@@ -10,19 +12,19 @@ npx degit sveltejs/template svelte-typescript-app
 cd svelte-typescript-app
 ```
 
-## Setup to TypeScript
+### Setup to TypeScript
 
 ```bash
 node scripts/setupTypeScript.js
 ```
 
-## Adding TypeScript to an existing project
+### Adding TypeScript to an existing project
 
 ```bash
 npm i -D tslib @rollup/plugin-typescript @tsconfig/svelte typescript svelte-preprocess svelte-check
 ```
 
-## Change file `rollup.config.js`
+### Change file `rollup.config.js`
 
 ```js
 // import sveltePreprocess from 'svelte-preprocess'; // Remove
@@ -40,7 +42,7 @@ export default {
 };
 ```
 
-## In file `rollup.config.js` Must have
+### In file `rollup.config.js` Must have
 
 ```json
 {
@@ -51,13 +53,13 @@ export default {
 }
 ```
 
-## CI Checks
+### CI Checks
 
 ```bash
 npx svelte-check
 ```
 
-## Run App
+### Run App
 
 ```bash
 npm run dev
@@ -69,6 +71,43 @@ see <http://localhost:8080>
 
 Ref:
 [Svelte <3 TypeScript](https://svelte.dev/blog/svelte-and-typescript)
+
+## Use Scss in Svelte
+
+### Install package Node V14 use node-sass@4
+
+```bash
+npm i -D node-sass@4
+```
+
+### Setting up a svelte-config.js
+
+```js
+const preprocess = require('svelte-preprocess');
+
+module.exports = {
+  preprocess: preprocess(),
+};
+```
+
+### Restart the svelte language server
+
+Restart the svelte language server
+You will need to tell svelte-vscode to restart the svelte language server in order to pick up the new configuration.
+
+Hit `ctrl-shift-p` or `cmd-shift-p` on mac, type `svelte restart`, and select `Svelte: Restart Language Server`. Any errors you were seeing should now go away and you're now all set up!
+
+### Set the Format on `<style>` Tags
+
+```scss
+<style lang="scss">
+/* ... */
+</style>
+```
+
+Ref:
+[SCSS/Less Support](https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/scss-less.md)
+[Add SASS to Svelte JS with svelte-preprocess](https://linguinecode.com/post/add-sass-svelte-js)
 
 _Psst — looking for a more complete solution? Check out [SvelteKit](https://kit.svelte.dev), the official framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing._
 
