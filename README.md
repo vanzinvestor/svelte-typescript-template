@@ -1,4 +1,10 @@
-# Setup Svelte
+# Svelte TypeScript Template
+
+## Feature Support
+
+- [x] TypeScript
+- [x] SCSS/SASS
+- [x] VS Code
 
 ## Use TypeScript in Svelte
 
