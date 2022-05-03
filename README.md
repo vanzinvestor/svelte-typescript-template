@@ -53,6 +53,19 @@ export default {
 }
 ```
 
+### Editor Support (Install Extension)
+
+Any editor using an LSP can be supported. The [VS Code extension](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) has been our primary focus, but there is work in progress on Atom, and Vim via coc-svelte has been updated with the latest LSP.
+
+After install extension. adjust your VS Code settings
+
+```json
+"[svelte]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+```
+
 ### CI Checks
 
 ```bash
@@ -67,10 +80,11 @@ npm run dev
 
 see <http://localhost:8080>
 
-## If see error close Vscode and reopen
+## If see error close VS Code and reopen
 
 Ref:
 [Svelte <3 TypeScript](https://svelte.dev/blog/svelte-and-typescript)
+[VS Code format svelte](https://github.com/sveltejs/language-tools/issues/225#issuecomment-673271334)
 
 ## Use Scss in Svelte
 
