@@ -6,6 +6,7 @@ import { terser } from 'rollup-plugin-terser';
 // import sveltePreprocess from 'svelte-preprocess';
 import autoPreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
+import replace from '@rollup/plugin-replace';
 import css from 'rollup-plugin-css-only';
 
 const production = !process.env.ROLLUP_WATCH;
@@ -38,12 +39,16 @@ function serve() {
 export default {
   input: 'src/main.ts',
   output: {
-    sourcemap: true,
+    sourcemap: !production,
     format: 'iife',
     name: 'app',
     file: 'public/build/bundle.js',
   },
   plugins: [
+    replace({
+      preventAssignment: true,
+      'process.env.NODE_ENV': JSON.stringify('production'),
+    }),
     svelte({
       // preprocess: sveltePreprocess({ sourceMap: !production }),
       preprocess: autoPreprocess(),
