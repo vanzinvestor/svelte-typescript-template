@@ -3,7 +3,8 @@
 ## Feature Support
 
 - [x] TypeScript
-- [x] SCSS/SASS
+- [x] Redux
+- [x] SASS/SCSS
 - [x] VS Code
 
 ## Use
