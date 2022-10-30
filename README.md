@@ -7,6 +7,7 @@
 - [x] TypeScript
 - [x] SASS
 - [x] Redux
+- [x] Svelte Navigator
 - [x] VS Code
 
 ## Use
