@@ -1,10 +1,12 @@
 # Svelte TypeScript Template
 
+![svelte version](https://img.shields.io/badge/svelte-3.52.0-f73e00.svg) ![rollup version](https://img.shields.io/badge/rollup-3.2.3-fbb040.svg) ![typescript version](https://img.shields.io/badge/typescript-4.8.4-informational.svg) ![sass version](https://img.shields.io/badge/sass-1.55.0-ff69b4.svg)
+
 ## Feature Support
 
 - [x] TypeScript
+- [x] SASS
 - [x] Redux
-- [x] SASS/SCSS
 - [x] VS Code
 
 ## Use
@@ -19,7 +21,13 @@ To create a new project based on this template using [degit](https://github.com/
 npx degit vanzinvestor/svelte-typescript-template svelte-typescript-app
 ```
 
-_Note that you will need to have [Node.js](https://nodejs.org/en/) installed._
+_Note that you will need to have [Node.js](https://nodejs.org/en/) installed. Make sure you run at least Node 14.18.0_
+
+If [Node.js](https://nodejs.org/en/) version below 14.18.0
+
+```bash
+npx degit vanzinvestor/svelte-typescript-template#v.1.0.0 svelte-typescript-app
+```
 
 ## Get started
 
