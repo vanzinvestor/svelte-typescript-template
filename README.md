@@ -6,6 +6,7 @@
 
 - [x] TypeScript
 - [x] SASS
+- [x] Import images
 - [x] Redux
 - [x] Svelte Navigator
 - [x] VS Code

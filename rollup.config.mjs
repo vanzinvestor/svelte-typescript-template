@@ -8,6 +8,7 @@ import autoPreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 import replace from '@rollup/plugin-replace';
 import css from 'rollup-plugin-css-only';
+import image from '@rollup/plugin-image';
 import { spawn } from 'child_process'; // Rollup 3
 
 const production = !process.env.ROLLUP_WATCH;
@@ -59,6 +60,12 @@ export default {
     // we'll extract any component CSS out into
     // a separate file - better for performance
     css({ output: 'bundle.css' }),
+
+    // Images are encoded using base64,
+    // which means they will be 33% larger than the size on disk.
+    // You should therefore only use this for small images
+    // where the convenience of having them available on startup
+    image(),
 
     // If you have external dependencies installed from
     // npm, you'll most likely need these plugins. In

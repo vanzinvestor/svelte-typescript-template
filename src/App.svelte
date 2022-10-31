@@ -1,8 +1,10 @@
 <script lang="ts">
+  import logo from './logo.svg';
   export let name: string;
 </script>
 
 <main>
+  <img src={logo} alt="" />
   <h1>Hello {name}!</h1>
   <p>
     Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
@@ -17,6 +19,10 @@
     padding: 1em;
     max-width: 240px;
     margin: 0 auto;
+  }
+
+  img {
+    height: 100px;
   }
 
   h1 {
