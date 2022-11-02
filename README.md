@@ -8,6 +8,7 @@
 - [x] SASS
 - [x] Import images
 - [x] Redux
+- [x] Eslint
 - [x] Svelte Navigator
 - [x] VS Code
 
